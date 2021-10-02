@@ -1,4 +1,5 @@
 @import "pico.min.css";
+@import "animate.min.css";
 
 body {
   display: flex;
