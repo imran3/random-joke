@@ -1,10 +1,26 @@
 @import "pico.min.css";
-.hidden {
-  display: none;
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.main-content {
-  min-height: calc(100vh - 120px);
+.container {
+  flex: 1;
+}
+
+footer {
+  padding-top: 0 !important;
+}
+
+footer p {
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 
 #joke .another-button {

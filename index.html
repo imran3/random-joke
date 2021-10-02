@@ -45,12 +45,19 @@
         </body>
       </article>
     </div>
-
-    <script>
-      fetchJokes().then(() => {
-        document.getElementById("loading").remove();
-        displayRandomJoke();
-      });
-    </script>
   </body>
+
+  <footer>
+    <p class="love">
+      Made with &#10084;&#65039; by
+      <a href="https://www.linkedin.com/in/imranazam3/">Imran Azam</a>
+    </p>
+  </footer>
+
+  <script>
+    fetchJokes().then(() => {
+      document.getElementById("loading").remove();
+      displayRandomJoke();
+    });
+  </script>
 </html>
