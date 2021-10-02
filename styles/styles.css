@@ -24,6 +24,6 @@ footer p {
   display: none;
 }
 
-#joke .another-button {
+#joke #another-joke-btn {
   text-align: end;
 }

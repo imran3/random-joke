@@ -12,6 +12,8 @@ async function fetchJokes() {
   });
 
   jokes = jokes.splice(2);
+
+  addEnterListner();
 }
 
 const displayRandomJoke = () => {
@@ -30,14 +32,12 @@ const displayRandomJoke = () => {
 };
 
 const animateCSS = (element, animation, prefix = "animate__") => {
-  // We create a Promise and return it
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, _) => {
     const animationName = `${prefix}${animation}`;
     const node = document.getElementById(element);
 
     node.classList.add(`${prefix}animated`, animationName);
 
-    // When the animation ends, we clean the classes and resolve the Promise
     function handleAnimationEnd(event) {
       event.stopPropagation();
       node.classList.remove(`${prefix}animated`, animationName);
@@ -45,5 +45,13 @@ const animateCSS = (element, animation, prefix = "animate__") => {
     }
 
     node.addEventListener("animationend", handleAnimationEnd, { once: true });
+  });
+};
+
+const addEnterListner = () => {
+  window.addEventListener("keyup", function (event) {
+    if (event.code == "Enter") {
+      displayRandomJoke();
+    }
   });
 };
