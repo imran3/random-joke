@@ -2,7 +2,6 @@ let jokes;
 const jokesLimit = 250;
 
 async function fetchJokes() {
-  console.log("getting jokes");
   const res = await fetch(
     "https://www.reddit.com/r/Jokes/hot/.json?limit=" + jokesLimit
   );
@@ -15,15 +14,13 @@ async function fetchJokes() {
 
 const displayRandomJoke = () => {
   const joke = jokes[Math.floor(Math.random() * jokes.length)];
-  console.log(joke);
 
   document.getElementById("title").innerText = joke.title;
 
-  to = joke.selftext.replace(/\n{2}/g, "&nbsp;</p><p>");
-  to = to.replace(/\n/g, "&nbsp;<br />");
-  to = "<p>" + to + "</p>";
+  let selftext = joke.selftext.replace(/\n{2}/g, "&nbsp;</p><p>");
+  selftext = selftext.replace(/\n/g, "&nbsp;<br />");
 
-  document.getElementById("selftext").innerHTML = to;
+  document.getElementById("selftext").innerHTML = "<p>" + selftext + "</p>";
   document.getElementById("joke").classList.remove("hidden");
 };
 
