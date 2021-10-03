@@ -1,6 +1,6 @@
 # What is this project
 
-This is simple web app that retrieves top 100 hot jokes from subreddit r/jokes and display them, one at time.
+Simple web app that retrieves top 100 hot jokes from subreddit r/jokes and display them, one at time.
 
 ## How to use
 
