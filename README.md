@@ -19,4 +19,4 @@ You can see this app running [here](https://imran3.github.io/random-joke).
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
